@@ -1,0 +1,336 @@
+{
+  "version": "36.0.0",
+  "artifacts": {
+    "amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd.template.json",
+        "terminationProtection": false,
+        "tags": {
+          "amplify:deployment-type": "sandbox",
+          "created-by": "amplify"
+        },
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/e0ef30d5624090a036fb6001ea545d3f1d9b114a4452e138f8057c771ff371a4.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd.assets"
+      ],
+      "metadata": {
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd": [
+          {
+            "type": "aws:cdk:stack-tags",
+            "data": [
+              {
+                "Key": "amplify:deployment-type",
+                "Value": "sandbox"
+              },
+              {
+                "Key": "created-by",
+                "Value": "amplify"
+              }
+            ]
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/deploymentType": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "deploymentType"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/region": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "region"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/auth/amplifyAuth/UserPool/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyAuthUserPool4BA7F805"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/auth/amplifyAuth/UserPoolAppClient/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyAuthUserPoolAppClient2626C6F8"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/auth/amplifyAuth/IdentityPool": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyAuthIdentityPool3FDE84CC"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/auth/amplifyAuth/authenticatedUserRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyAuthauthenticatedUserRoleD8DA3689"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/auth/amplifyAuth/authenticatedUserRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyAuthauthenticatedUserRoleDefaultPolicy82E52873"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/auth/amplifyAuth/unauthenticatedUserRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyAuthunauthenticatedUserRole2B524D9E"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/auth/amplifyAuth/IdentityPoolRoleAttachment": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyAuthIdentityPoolRoleAttachment045F17C8"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/auth/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/auth/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/auth/reference-to-amplifyamplifyqrticketec2usersandbox7052f44dddfunctionNestedStackfunctionNestedStackResourceF1F304AFOutputs.amplifyamplifyqrticketec2usersandbox7052f44dddfunctionhellolambdaCC9B3212Arn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyamplifyqrticketec2usersandbox7052f44dddfunctionNestedStackfunctionNestedStackResourceF1F304AFOutputsamplifyamplifyqrticketec2usersandbox7052f44dddfunctionhellolambdaCC9B3212Arn"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/auth/reference-to-amplifyamplifyqrticketec2usersandbox7052f44dddfunctionNestedStackfunctionNestedStackResourceF1F304AFOutputs.amplifyamplifyqrticketec2usersandbox7052f44dddfunctionbedrocklambdaC496A7F6Arn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoamplifyamplifyqrticketec2usersandbox7052f44dddfunctionNestedStackfunctionNestedStackResourceF1F304AFOutputsamplifyamplifyqrticketec2usersandbox7052f44dddfunctionbedrocklambdaC496A7F6Arn"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/auth/amplifyamplifyqrticketec2usersandbox7052f44dddauthamplifyAuthUserPoolA4DF4A8CRef": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyamplifyqrticketec2usersandbox7052f44dddauthamplifyAuthUserPoolA4DF4A8CRef"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/auth/amplifyamplifyqrticketec2usersandbox7052f44dddauthamplifyAuthUserPoolAppClient0B2F0AD3Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyamplifyqrticketec2usersandbox7052f44dddauthamplifyAuthUserPoolAppClient0B2F0AD3Ref"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/auth/amplifyamplifyqrticketec2usersandbox7052f44dddauthamplifyAuthIdentityPool9590DE51Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyamplifyqrticketec2usersandbox7052f44dddauthamplifyAuthIdentityPool9590DE51Ref"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/auth.NestedStack/auth.NestedStackResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "auth179371D7"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/userPoolId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "userPoolId"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/webClientId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "webClientId"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/identityPoolId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "identityPoolId"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/authRegion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "authRegion"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/allowUnauthenticatedIdentities": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "allowUnauthenticatedIdentities"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/signupAttributes": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "signupAttributes"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/usernameAttributes": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "usernameAttributes"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/verificationMechanisms": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "verificationMechanisms"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/passwordPolicyMinLength": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "passwordPolicyMinLength"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/passwordPolicyRequirements": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "passwordPolicyRequirements"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/function/hello-lambda/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "hellolambdaServiceRoleEB65A32D"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/function/hello-lambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "hellolambdaDE420C60"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/function/bedrock-lambda/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "bedrocklambdaServiceRole3CEE5B27"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/function/bedrock-lambda/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "bedrocklambdaServiceRoleDefaultPolicy11258073"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/function/bedrock-lambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "bedrocklambda72EC6414"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/function/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/function/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/function/amplifyamplifyqrticketec2usersandbox7052f44dddfunctionhellolambdaCC9B3212Arn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyamplifyqrticketec2usersandbox7052f44dddfunctionhellolambdaCC9B3212Arn"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/function/amplifyamplifyqrticketec2usersandbox7052f44dddfunctionbedrocklambdaC496A7F6Arn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyamplifyqrticketec2usersandbox7052f44dddfunctionbedrocklambdaC496A7F6Arn"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/function/amplifyamplifyqrticketec2usersandbox7052f44dddfunctionhellolambdaCC9B3212Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyamplifyqrticketec2usersandbox7052f44dddfunctionhellolambdaCC9B3212Ref"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/function/amplifyamplifyqrticketec2usersandbox7052f44dddfunctionbedrocklambdaC496A7F6Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyamplifyqrticketec2usersandbox7052f44dddfunctionbedrocklambdaC496A7F6Ref"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/function.NestedStack/function.NestedStackResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "function1351588B"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/definedFunctions": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "definedFunctions"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/customOutputs": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "customOutputs"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,475 @@
+{
+ "Description": "{\"createdOn\":\"Linux\",\"createdBy\":\"AmplifySandbox\",\"createdWith\":\"1.0.3\",\"stackType\":\"function-Lambda\",\"metadata\":{}}",
+ "Resources": {
+  "hellolambdaServiceRoleEB65A32D": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+       ]
+      ]
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "amplify:deployment-type",
+      "Value": "sandbox"
+     },
+     {
+      "Key": "amplify:friendly-name",
+      "Value": "hello"
+     },
+     {
+      "Key": "created-by",
+      "Value": "amplify"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/function/hello-lambda/ServiceRole/Resource"
+   }
+  },
+  "hellolambdaDE420C60": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Code": {
+     "S3Bucket": {
+      "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
+     },
+     "S3Key": "3dd8b8fc9bcf558ca9cd07ee5e5798f7a93fa087185e0080c2aeb08e3859a7bf.zip"
+    },
+    "Environment": {
+     "Variables": {
+      "AMPLIFY_SSM_ENV_CONFIG": "{}"
+     }
+    },
+    "Handler": "index.handler",
+    "MemorySize": 512,
+    "Role": {
+     "Fn::GetAtt": [
+      "hellolambdaServiceRoleEB65A32D",
+      "Arn"
+     ]
+    },
+    "Runtime": "nodejs18.x",
+    "Tags": [
+     {
+      "Key": "amplify:deployment-type",
+      "Value": "sandbox"
+     },
+     {
+      "Key": "amplify:friendly-name",
+      "Value": "hello"
+     },
+     {
+      "Key": "created-by",
+      "Value": "amplify"
+     }
+    ],
+    "Timeout": 3
+   },
+   "DependsOn": [
+    "hellolambdaServiceRoleEB65A32D"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/function/hello-lambda/Resource",
+    "aws:asset:path": "asset.3dd8b8fc9bcf558ca9cd07ee5e5798f7a93fa087185e0080c2aeb08e3859a7bf",
+    "aws:asset:is-bundled": true,
+    "aws:asset:property": "Code"
+   }
+  },
+  "bedrocklambdaServiceRole3CEE5B27": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+       ]
+      ]
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "amplify:deployment-type",
+      "Value": "sandbox"
+     },
+     {
+      "Key": "amplify:friendly-name",
+      "Value": "bedrock"
+     },
+     {
+      "Key": "created-by",
+      "Value": "amplify"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/function/bedrock-lambda/ServiceRole/Resource"
+   }
+  },
+  "bedrocklambdaServiceRoleDefaultPolicy11258073": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "bedrock:InvokeModel",
+        "bedrock:InvokeModelWithResponseStream"
+       ],
+       "Effect": "Allow",
+       "Resource": "arn:aws:bedrock:us-east-1::foundation-model/*"
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "bedrocklambdaServiceRoleDefaultPolicy11258073",
+    "Roles": [
+     {
+      "Ref": "bedrocklambdaServiceRole3CEE5B27"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/function/bedrock-lambda/ServiceRole/DefaultPolicy/Resource"
+   }
+  },
+  "bedrocklambda72EC6414": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Code": {
+     "S3Bucket": {
+      "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
+     },
+     "S3Key": "043a020b5b4e9b9cf2f5ba6446a58f84b478bc1ab412ee3bd12d8ea05045ff32.zip"
+    },
+    "Environment": {
+     "Variables": {
+      "AMPLIFY_SSM_ENV_CONFIG": "{}"
+     }
+    },
+    "Handler": "index.handler",
+    "MemorySize": 512,
+    "Role": {
+     "Fn::GetAtt": [
+      "bedrocklambdaServiceRole3CEE5B27",
+      "Arn"
+     ]
+    },
+    "Runtime": "nodejs18.x",
+    "Tags": [
+     {
+      "Key": "amplify:deployment-type",
+      "Value": "sandbox"
+     },
+     {
+      "Key": "amplify:friendly-name",
+      "Value": "bedrock"
+     },
+     {
+      "Key": "created-by",
+      "Value": "amplify"
+     }
+    ],
+    "Timeout": 3
+   },
+   "DependsOn": [
+    "bedrocklambdaServiceRoleDefaultPolicy11258073",
+    "bedrocklambdaServiceRole3CEE5B27"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/function/bedrock-lambda/Resource",
+    "aws:asset:path": "asset.043a020b5b4e9b9cf2f5ba6446a58f84b478bc1ab412ee3bd12d8ea05045ff32",
+    "aws:asset:is-bundled": true,
+    "aws:asset:property": "Code"
+   }
+  },
+  "CDKMetadata": {
+   "Type": "AWS::CDK::Metadata",
+   "Properties": {
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/zVO0QqDMAz8Ft9rtjkf9jqFPcpwHyC1zSRaWzB1Y4j/vmoRAnfHXS7J4JLncE7kl1Olh9RQC0uF7FG/vFSDCEazGDm2WjbWaewZqh0es1WenBUkR1hqZ1CUb7vj0xlSv01Gtgq+NpIZPcN9g6ChmNWAvpCMItZDyB+lq6iR3TwpFPtC+KUj2+0XDiPw0llNMb/9Bj2fPpcbhMmSnonSabaeRoQ64h+WeSG07gAAAA=="
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-amplifyqrticket-ec2user-sandbox-7052f44ddd/function/CDKMetadata/Default"
+   },
+   "Condition": "CDKMetadataAvailable"
+  }
+ },
+ "Conditions": {
+  "CDKMetadataAvailable": {
+   "Fn::Or": [
+    {
+     "Fn::Or": [
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "af-south-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-east-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-northeast-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-northeast-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-south-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-southeast-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-southeast-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ca-central-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "cn-north-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "cn-northwest-1"
+       ]
+      }
+     ]
+    },
+    {
+     "Fn::Or": [
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-central-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-north-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-south-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-west-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-west-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-west-3"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "il-central-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "me-central-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "me-south-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "sa-east-1"
+       ]
+      }
+     ]
+    },
+    {
+     "Fn::Or": [
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "us-east-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "us-east-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "us-west-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "us-west-2"
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "Outputs": {
+  "amplifyamplifyqrticketec2usersandbox7052f44dddfunctionhellolambdaCC9B3212Arn": {
+   "Value": {
+    "Fn::GetAtt": [
+     "hellolambdaDE420C60",
+     "Arn"
+    ]
+   }
+  },
+  "amplifyamplifyqrticketec2usersandbox7052f44dddfunctionbedrocklambdaC496A7F6Arn": {
+   "Value": {
+    "Fn::GetAtt": [
+     "bedrocklambda72EC6414",
+     "Arn"
+    ]
+   }
+  },
+  "amplifyamplifyqrticketec2usersandbox7052f44dddfunctionhellolambdaCC9B3212Ref": {
+   "Value": {
+    "Ref": "hellolambdaDE420C60"
+   }
+  },
+  "amplifyamplifyqrticketec2usersandbox7052f44dddfunctionbedrocklambdaC496A7F6Ref": {
+   "Value": {
+    "Ref": "bedrocklambda72EC6414"
+   }
+  }
+ }
+}

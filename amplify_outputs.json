@@ -1,0 +1,30 @@
+{
+  "auth": {
+    "user_pool_id": "ap-northeast-1_LpwaD51kR",
+    "aws_region": "ap-northeast-1",
+    "user_pool_client_id": "36senjs1893d0mmgkjqnpj2glo",
+    "identity_pool_id": "ap-northeast-1:48d676ec-e3e8-4d91-95a6-965517584b8a",
+    "standard_required_attributes": [
+      "email"
+    ],
+    "username_attributes": [
+      "email"
+    ],
+    "user_verification_types": [
+      "email"
+    ],
+    "password_policy": {
+      "min_length": 8,
+      "require_numbers": true,
+      "require_lowercase": true,
+      "require_uppercase": true,
+      "require_symbols": true
+    },
+    "unauthenticated_identities_enabled": true
+  },
+  "version": "1",
+  "custom": {
+    "helloFunctionName": "amplify-amplifyqrticket-ec2use-hellolambdaDE420C60-Y5zEhvCHZVq1",
+    "bedrockFunctionName": "amplify-amplifyqrticket-ec2u-bedrocklambda72EC6414-Gp64D2D1j3b8"
+  }
+}
